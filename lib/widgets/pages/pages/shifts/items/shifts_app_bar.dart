@@ -15,7 +15,7 @@ import 'package:haski/widgets/pages/pages/shifts/filter_shifts_page.dart';
 class ShiftsAppBar extends StatelessWidget implements PreferredSizeWidget {
   final ShiftsBloc screenCubit;
 
-  ShiftsAppBar({required this.screenCubit});
+  const ShiftsAppBar({super.key, required this.screenCubit});
 
   @override
   Widget build(BuildContext context) {

@@ -36,11 +36,13 @@ class NewsBloc extends Bloc<NewsEvent, NewsState> {
     try {
       if (_currentTabIndex == 1) {
         _allNews = await newsManager.loadNews();
+        emit(ContentLoaded());
         emit(NewsLoaded(_allNews));
         return;
       }
 
       _allMessages = await messagesManager.loadMessages();
+      emit(ContentLoaded());
       emit(MessagesLoaded(_allMessages));
     } catch (error) {
       emit(NewsError(error.toString()));
@@ -57,6 +59,7 @@ class NewsBloc extends Bloc<NewsEvent, NewsState> {
       return;
     }
 
+    emit(ContentLoaded());
     if (_currentTabIndex == 0) {
       emit(MessagesLoaded(_allMessages));
       return;

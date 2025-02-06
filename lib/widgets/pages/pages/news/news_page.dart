@@ -67,7 +67,8 @@ class _NewsPageState extends State<NewsPage>
       listener: (context, state) {
         if (state is MessagesLoaded ||
             state is NewsLoaded ||
-            state is NewsError) {
+            state is NewsError ||
+            state is ContentLoaded) {
           _refreshCompleter?.complete();
           _refreshCompleter = null;
         }

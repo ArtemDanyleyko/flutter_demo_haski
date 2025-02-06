@@ -17,6 +17,11 @@ class ContentLoading extends NewsState {
   List<Object?> get props => [];
 }
 
+class ContentLoaded extends NewsState {
+  @override
+  List<Object?> get props => [];
+}
+
 class NewsLoaded extends NewsState {
   final List<News> news;
   const NewsLoaded(this.news);
