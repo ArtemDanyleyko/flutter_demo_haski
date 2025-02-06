@@ -119,7 +119,10 @@ class _NewsPageState extends State<NewsPage>
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Image.network(news.image, fit: BoxFit.fitWidth),
+                      Image.network(news.image, fit: BoxFit.fitWidth,
+                          errorBuilder: (context, error, stackTrace) {
+                        return Text("Ошибка загрузки изображения: $error");
+                      }),
                       Padding(
                         padding: const EdgeInsets.symmetric(
                             vertical: 8.0, horizontal: 16.0),
