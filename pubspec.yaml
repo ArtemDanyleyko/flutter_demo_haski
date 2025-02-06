@@ -1,0 +1,55 @@
+name: haski
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.0.9
+  flutter_bloc: ^9.0.0
+  flutter_native_splash: ^2.4.4
+  easy_localization: ^3.0.4
+  injector: ^3.0.0
+  http: ^1.2.1
+  toast: ^0.3.0
+  smooth_page_indicator: ^1.2.0+3
+  carousel_slider: ^5.0.0
+  cached_network_image: ^3.4.1
+  curved_navigation_bar: ^1.0.3
+  equatable: ^2.0.0
+  table_calendar: ^3.0.9
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.3
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/translations/
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/ic_haski.png"
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/images/ic_haski.png
+  android: true
+  ios: true
+  fullscreen: true
+  android_gravity: center
+  ios_content_mode: center
+
+easy_localization:
+  path: assets/translations
+  savePath: lib/generated/
+  useOnlyMainLang: true 

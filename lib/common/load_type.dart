@@ -1,0 +1,1 @@
+enum LoadType { initial, refresh }
