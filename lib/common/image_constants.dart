@@ -5,4 +5,8 @@ class ImageConstants {
   static const String icNotifications = "assets/images/ic_notifications.svg";
   static const String icSettings = "assets/images/ic_settings.svg";
   static const String icShiftsTab = "assets/images/ic_shifts_tab.svg";
+  static const String icViber = "assets/images/ic_viber.svg";
+  static const String icTwitter = "assets/images/ic_twitter.svg";
+  static const String icFacebook = "assets/images/ic_facebook.svg";
+  static const String icTelegram = "assets/images/ic_telegram.svg";
 }

@@ -26,4 +26,5 @@ class AppColors {
   static const frozenLandscape = Color.fromRGBO(172, 230, 251, 1);
   static const frenchPass = Color.fromRGBO(197, 237, 252, 1);
   static const coarseWool = Color.fromRGBO(22, 29, 34, 1);
+  static const rendezvous = Color.fromRGBO(170, 189, 208, 1);
 }

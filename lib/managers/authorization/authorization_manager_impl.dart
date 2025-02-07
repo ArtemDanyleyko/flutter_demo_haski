@@ -6,4 +6,9 @@ class AuthorizationManagerImpl extends AuthorizationManager {
       String username, String password, bool shouldSaveUser) {
     return Future.value(true);
   }
+
+  @override
+  Future<bool> logout() {
+    return Future.value(true);
+  }
 }

@@ -5,6 +5,8 @@ import 'package:haski/managers/messages/messages_manager.dart';
 import 'package:haski/managers/messages/messages_manager_impl.dart';
 import 'package:haski/managers/news/news_manager.dart';
 import 'package:haski/managers/news/news_manager_impl.dart';
+import 'package:haski/managers/profile/profile_manager.dart';
+import 'package:haski/managers/profile/profile_manager_impl.dart';
 import 'package:haski/managers/shifts/shifts_manager_impl.dart';
 import 'package:haski/managers/shifts/shifts_manager.dart';
 import 'package:haski/managers/authorization/authorization_manager_impl.dart';
@@ -32,6 +34,7 @@ class CompositionRoot {
     injector.registerDependency<ShiftsManager>(() => ShiftsManagerImpl());
     injector.registerDependency<NewsManager>(() => NewsManagerImpl());
     injector.registerDependency<MessagesManager>(() => MessagesManagerImpl());
+    injector.registerDependency<ProfileManager>(() => ProfileManagerImpl());
   }
 
   static void registerProviders() {}

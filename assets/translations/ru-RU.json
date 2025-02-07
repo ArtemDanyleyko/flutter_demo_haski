@@ -137,5 +137,7 @@
   "usernameCaption": "Имя пользователя",
   "usernameHint": "ivan.ivanov123",
   "worked": "Отработанные",
-  "yes": "Да"
+  "yes": "Да",
+  "logout": "Выйти с аккаунта",
+  "unknownState": "Неизвестное состояние"
 }

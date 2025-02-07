@@ -125,5 +125,7 @@ abstract class  LocaleKeys {
   static const usernameHint = 'usernameHint';
   static const worked = 'worked';
   static const yes = 'yes';
+  static const logout = 'logout';
+  static const unknownState = 'unknownState';
 
 }

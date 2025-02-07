@@ -7,6 +7,7 @@ import 'package:haski/common/font_constants.dart';
 import 'package:haski/common/image_constants.dart';
 import 'package:haski/generated/locale_keys.g.dart';
 import 'package:haski/widgets/pages/pages/news/news_page.dart';
+import 'package:haski/widgets/pages/pages/settings/settings_page.dart';
 import 'package:haski/widgets/pages/pages/shifts/bloc/shifts_bloc.dart';
 import 'package:haski/widgets/pages/pages/shifts/bloc/shifts_event.dart';
 import 'package:haski/widgets/pages/pages/shifts/bloc/shifts_state.dart';
@@ -16,6 +17,9 @@ class ShiftsAppBar extends StatelessWidget implements PreferredSizeWidget {
   final ShiftsBloc screenCubit;
 
   const ShiftsAppBar({super.key, required this.screenCubit});
+
+  @override
+  Size get preferredSize => Size.fromHeight(120.0);
 
   @override
   Widget build(BuildContext context) {
@@ -64,8 +68,8 @@ class ShiftsAppBar extends StatelessWidget implements PreferredSizeWidget {
         },
       ),
       actions: [
-        _buildIconButton(context, ImageConstants.icNotifications),
-        _buildIconButton(context, ImageConstants.icSettings),
+        _buildIconButton(context, ImageConstants.icNotifications, goToNewsPage),
+        _buildIconButton(context, ImageConstants.icSettings, goToSettingsPage),
       ],
       bottom: PreferredSize(
         preferredSize: Size.fromHeight(60.0),
@@ -130,7 +134,8 @@ class ShiftsAppBar extends StatelessWidget implements PreferredSizeWidget {
     );
   }
 
-  Widget _buildIconButton(BuildContext context, String iconPath) {
+  Widget _buildIconButton(BuildContext context, String iconPath,
+      void Function(BuildContext) onButtonPressed) {
     return IconButton(
       icon: SvgPicture.asset(
         iconPath,
@@ -138,16 +143,26 @@ class ShiftsAppBar extends StatelessWidget implements PreferredSizeWidget {
         height: 24,
       ),
       onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (BuildContext context) => const NewsPage(),
-          ),
-        );
+        onButtonPressed(context);
       },
     );
   }
 
-  @override
-  Size get preferredSize => Size.fromHeight(120.0);
+  void goToNewsPage(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (BuildContext context) => const NewsPage(),
+      ),
+    );
+  }
+
+  void goToSettingsPage(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (BuildContext context) => const SettingsPage(),
+      ),
+    );
+  }
 }

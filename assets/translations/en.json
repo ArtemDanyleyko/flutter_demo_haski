@@ -138,5 +138,7 @@
   "usernameCaption": "Username",
   "usernameHint": "john.doe1232",
   "worked": "Worked",
-  "yes": "Yes"
+  "yes": "Yes",
+  "logout": "Logout",
+  "unknownState": "Unknown state"
 }

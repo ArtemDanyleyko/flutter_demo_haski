@@ -154,7 +154,9 @@ class CodegenLoader extends AssetLoader{
   "usernameCaption": "Username",
   "usernameHint": "john.doe1232",
   "worked": "Worked",
-  "yes": "Yes"
+  "yes": "Yes",
+  "logout": "Logout",
+  "unknownState": "Unknown state"
 };
 static const Map<String,dynamic> ru_RU = {
   "active": "Активный",
@@ -235,9 +237,8 @@ static const Map<String,dynamic> ru_RU = {
   "ordersCount": {
     "zero": "{} заказов",
     "one": "{} заказ",
-    "two": "{} заказа",
-    "few": "{} заказа",
-    "many": "{} заказов",
+    "few": "{} заказов",
+    "many": "{} заказа",
     "other": "{} заказов"
   },
   "or": "Или",
@@ -296,7 +297,9 @@ static const Map<String,dynamic> ru_RU = {
   "usernameCaption": "Имя пользователя",
   "usernameHint": "ivan.ivanov123",
   "worked": "Отработанные",
-  "yes": "Да"
+  "yes": "Да",
+  "logout": "Выйти с аккаунта",
+  "unknownState": "Неизвестное состояние"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"en": en, "ru_RU": ru_RU};
 }

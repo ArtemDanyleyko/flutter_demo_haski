@@ -15,7 +15,7 @@ import 'package:haski/widgets/pages/pages/shifts/bloc/shifts_state.dart';
 import 'package:injector/injector.dart';
 
 class ShiftsPage extends StatefulWidget {
-  const ShiftsPage({Key? key}) : super(key: key);
+  const ShiftsPage({super.key});
 
   @override
   _ShiftsPageState createState() => _ShiftsPageState();

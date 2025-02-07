@@ -5,6 +5,8 @@ import 'package:haski/generated/locale_keys.g.dart';
 import 'package:haski/widgets/controls/date_range_picker.dart';
 
 class DateRangePickerScreen extends StatefulWidget {
+  const DateRangePickerScreen({super.key});
+
   @override
   _DateRangePickerScreenState createState() => _DateRangePickerScreenState();
 }
