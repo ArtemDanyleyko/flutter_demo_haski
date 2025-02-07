@@ -47,6 +47,7 @@ Future<void> main() async {
       fallbackLocale: const Locale('ru', 'RU'),
       startLocale: const Locale('ru', 'RU'),
       assetLoader: const CodegenLoader(),
+      ignorePluralRules: false,
       child: MainApp(injector: injector, homeScreen: launchScreen),
     ),
   );

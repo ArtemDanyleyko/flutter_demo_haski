@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:haski/common/app_colors.dart';
@@ -79,31 +80,35 @@ class _ShiftsPageState extends State<ShiftDetailsPage> {
                     height: 20,
                   ),
                   ShiftDetailsField(
-                      title: "Дата", subtitle: currentShift.startTime.longDate),
+                      title: LocaleKeys.date.tr(),
+                      subtitle: currentShift.startTime.longDate),
                   SizedBox(height: 20.0),
                   ShiftDetailsField(
-                      title: "Количество выделенных мест",
-                      subtitle:
-                          "${currentShift.freeSeatsCount.toString()} человек"),
+                      title: LocaleKeys.selectedSeatsCount.tr(),
+                      subtitle: LocaleKeys.peopleCount
+                          .plural(currentShift.freeSeatsCount)),
                   SizedBox(height: 20.0),
                   ShiftDetailsField(
-                      title: "Уже записалось",
-                      subtitle:
-                          "${currentShift.empoyeesCount.toString()} человек"),
+                      title: LocaleKeys.alreadySignedUp.tr(),
+                      subtitle: LocaleKeys.peopleCount
+                          .plural(currentShift.empoyeesCount)),
                   SizedBox(height: 20.0),
                   ShiftDetailsField(
-                      title: "Ставка в час",
-                      subtitle: "₴ ${currentShift.ratePerHour.toString()}"),
+                      title: LocaleKeys.ratePerHour.tr(),
+                      subtitle: LocaleKeys.ratePerHourFormatted
+                          .plural(currentShift.ratePerHour)),
                   SizedBox(height: 20.0),
                   ShiftDetailsField(
-                      title: "Выделено часов на смену",
+                      title: LocaleKeys.allocatedHoursForShift.tr(),
                       subtitle: currentShift.hoursForShift.toString()),
                   SizedBox(height: 20.0),
                   ShiftDetailsField(
-                      title: "Бюджет", subtitle: currentShift.salaryRate),
+                      title: LocaleKeys.budget.tr(),
+                      subtitle: currentShift.salaryRate),
                   SizedBox(height: 20.0),
                   ShiftDetailsField(
-                      title: "Адрес", subtitle: currentShift.address),
+                      title: LocaleKeys.address.tr(),
+                      subtitle: currentShift.address),
                   SizedBox(height: 20.0),
                   Align(
                     alignment: Alignment.center,
@@ -112,7 +117,7 @@ class _ShiftsPageState extends State<ShiftDetailsPage> {
                       child: GestureDetector(
                           onTap: () => {_screenCubit.add(SignUpShift())},
                           child: Text(
-                            "Записаться",
+                            LocaleKeys.signUp.tr(),
                             style: TextStyle(
                                 fontSize: 17,
                                 color: currentShift.shiftState.isAvailable

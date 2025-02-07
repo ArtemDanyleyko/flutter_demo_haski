@@ -5,7 +5,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:haski/common/app_colors.dart';
 import 'package:haski/common/font_constants.dart';
 import 'package:haski/common/image_constants.dart';
-import 'package:haski/extensions/build_context_extension.dart';
 import 'package:haski/generated/locale_keys.g.dart';
 import 'package:haski/widgets/pages/pages/login/login_cubit.dart';
 import 'package:haski/widgets/pages/pages/login/login_state.dart';
@@ -75,7 +74,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: Row(
                   children: [
                     Text(
-                      LocaleKeys.Email.tr(),
+                      LocaleKeys.email.tr(),
                       style: TextStyle(
                           fontFamily: FontConstants.nunito,
                           fontWeight: FontWeight.w500,
@@ -92,7 +91,7 @@ class _LoginPageState extends State<LoginPage> {
                 keyboardType: TextInputType.emailAddress,
                 textInputAction: TextInputAction.next,
                 decoration: InputDecoration(
-                    hintText: LocaleKeys.Email.tr(),
+                    hintText: LocaleKeys.email.tr(),
                     hintStyle: TextStyle(color: AppColors.sweetBlue),
                     contentPadding:
                         const EdgeInsets.symmetric(horizontal: 15, vertical: 0),
@@ -113,7 +112,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: Row(
                   children: [
                     Text(
-                      LocaleKeys.Password.tr(),
+                      LocaleKeys.password.tr(),
                       style: TextStyle(
                           fontFamily: FontConstants.nunito,
                           fontWeight: FontWeight.w500,
@@ -133,7 +132,7 @@ class _LoginPageState extends State<LoginPage> {
                 textInputAction: TextInputAction.done,
                 obscureText: !isPasswordVisible,
                 decoration: InputDecoration(
-                  hintText: LocaleKeys.Password.tr(),
+                  hintText: LocaleKeys.password.tr(),
                   hintStyle: TextStyle(color: AppColors.sweetBlue),
                   suffixIcon: IconButton(
                     icon: Icon(
@@ -185,7 +184,7 @@ class _LoginPageState extends State<LoginPage> {
                           state.canLogin ? screenCubit.login(context) : null;
                         },
                         child: Text(
-                          LocaleKeys.Login.tr(),
+                          LocaleKeys.login.tr(),
                           style: const TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w400,

@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:haski/common/app_colors.dart';
+import 'package:haski/generated/locale_keys.g.dart';
 import 'package:haski/widgets/controls/date_range_picker.dart';
 
 class DateRangePickerScreen extends StatefulWidget {
@@ -17,7 +19,7 @@ class _DateRangePickerScreenState extends State<DateRangePickerScreen> {
       body: Align(
         alignment: Alignment.bottomCenter,
         child: Container(
-          color: Colors.white, // Белый фон
+          color: Colors.white,
           child: Column(
             children: [
               Row(
@@ -34,7 +36,7 @@ class _DateRangePickerScreenState extends State<DateRangePickerScreen> {
                           Navigator.of(context).pop(_dateTimeRange);
                         },
                         child: Text(
-                          'Отфильтровать',
+                          LocaleKeys.filter.tr(),
                           style: TextStyle(
                               color: AppColors.main,
                               fontSize: 17,

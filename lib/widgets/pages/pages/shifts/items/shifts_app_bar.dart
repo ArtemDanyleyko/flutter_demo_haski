@@ -28,7 +28,7 @@ class ShiftsAppBar extends StatelessWidget implements PreferredSizeWidget {
           return Column(
             children: [
               Text(
-                LocaleKeys.Shifts.tr(),
+                LocaleKeys.shifts.tr(),
                 style: TextStyle(
                   fontFamily: FontConstants.nunito,
                   fontSize: 17,
@@ -37,7 +37,7 @@ class ShiftsAppBar extends StatelessWidget implements PreferredSizeWidget {
                 ),
               ),
               Text(
-                "Всего $shiftCount",
+                LocaleKeys.totalShifts.plural(shiftCount),
                 style: TextStyle(
                   fontFamily: FontConstants.nunito,
                   fontSize: 12,
@@ -97,28 +97,28 @@ class ShiftsAppBar extends StatelessWidget implements PreferredSizeWidget {
                 Tab(
                   height: 40,
                   child: Text(
-                    'Все',
+                    LocaleKeys.all.tr(),
                     style: TextStyle(fontSize: 14, color: AppColors.hoki),
                   ),
                 ),
                 Tab(
                   height: 40,
                   child: Text(
-                    'Запланированные',
+                    LocaleKeys.scheduled.tr(),
                     style: TextStyle(fontSize: 14, color: AppColors.hoki),
                   ),
                 ),
                 Tab(
                   height: 40,
                   child: Text(
-                    'Отработанные',
+                    LocaleKeys.worked.tr(),
                     style: TextStyle(fontSize: 14, color: AppColors.hoki),
                   ),
                 ),
                 Tab(
                   height: 40,
                   child: Text(
-                    'Отмененные',
+                    LocaleKeys.cancelled.tr(),
                     style: TextStyle(fontSize: 14, color: AppColors.hoki),
                   ),
                 ),

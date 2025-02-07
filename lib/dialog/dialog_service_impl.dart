@@ -11,12 +11,15 @@ class DialogServiceImpl implements DialogService {
   @override
   Future<void> showToast(String msg, {int gravity = Toast.bottom}) {
     Toast.show(msg,
-        backgroundColor: AppColors.orange, gravity: gravity, duration: Toast.lengthLong);
+        backgroundColor: AppColors.orange,
+        gravity: gravity,
+        duration: Toast.lengthLong);
     return Future.value();
   }
 
   @override
-  Future<T?> showBottomSheet<T>(BuildContext context, Widget Function(BuildContext) builder,
+  Future<T?> showBottomSheet<T>(
+      BuildContext context, Widget Function(BuildContext) builder,
       {bool isScrollControlled = false}) {
     return showModalBottomSheet(
         context: context,
@@ -60,7 +63,7 @@ class DialogServiceImpl implements DialogService {
                 TextButton(
                   onPressed: () => Navigator.pop(context, false),
                   child: Text(
-                    no ?? LocaleKeys.No.tr(),
+                    no ?? LocaleKeys.no.tr(),
                     style: TextStyle(
                         fontFamily: FontConstants.nunito,
                         fontSize: 16,
@@ -71,7 +74,7 @@ class DialogServiceImpl implements DialogService {
                 TextButton(
                   onPressed: () => Navigator.pop(context, true),
                   child: Text(
-                    yes ?? LocaleKeys.Yes.tr(),
+                    yes ?? LocaleKeys.yes.tr(),
                     style: TextStyle(
                         fontFamily: FontConstants.nunito,
                         fontSize: 16,
@@ -112,7 +115,8 @@ class DialogServiceImpl implements DialogService {
   }
 
   @override
-  Future showAlertDialog(BuildContext context, String message, {String? title, String? ok}) async {
+  Future showAlertDialog(BuildContext context, String message,
+      {String? title, String? ok}) async {
     await showDialog(
       context: context,
       builder: (context) => AlertDialog(
@@ -147,7 +151,7 @@ class DialogServiceImpl implements DialogService {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
-                    ok ?? LocaleKeys.Ok.tr(),
+                    ok ?? LocaleKeys.ok.tr(),
                     style: TextStyle(
                         fontFamily: FontConstants.nunito,
                         fontSize: 16,
@@ -162,7 +166,8 @@ class DialogServiceImpl implements DialogService {
   }
 
   @override
-  Future<int?> showImageDetailsCarousel(BuildContext context, List<String> images,
+  Future<int?> showImageDetailsCarousel(
+      BuildContext context, List<String> images,
       [int initialIndex = 0]) {
     return showDialog(
       context: context,

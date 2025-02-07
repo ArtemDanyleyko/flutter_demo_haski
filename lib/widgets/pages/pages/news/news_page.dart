@@ -1,9 +1,11 @@
 import 'dart:async';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:haski/common/app_colors.dart';
 import 'package:haski/common/load_type.dart';
 import 'package:haski/dialog/dialog_service.dart';
+import 'package:haski/generated/locale_keys.g.dart';
 import 'package:haski/managers/messages/messages_manager.dart';
 import 'package:haski/managers/news/news_manager.dart';
 import 'package:haski/widgets/pages/pages/news/bloc/news_page_bloc.dart';
@@ -121,7 +123,8 @@ class _NewsPageState extends State<NewsPage>
                     children: [
                       Image.network(news.image, fit: BoxFit.fitWidth,
                           errorBuilder: (context, error, stackTrace) {
-                        return Text("Ошибка загрузки изображения: $error");
+                        return Text(LocaleKeys.imageLoadError
+                            .tr(args: [error.toString()]));
                       }),
                       Padding(
                         padding: const EdgeInsets.symmetric(
@@ -140,7 +143,9 @@ class _NewsPageState extends State<NewsPage>
             ),
           );
         } else if (state is NewsError) {
-          return Center(child: Text('Ошибка: ${state.exeption.toString()}'));
+          return Center(
+              child: Text(LocaleKeys.errorTemplate
+                  .tr(args: [state.exeption.toString()])));
         }
         return const SizedBox.shrink();
       },
@@ -182,7 +187,9 @@ class _NewsPageState extends State<NewsPage>
             ),
           );
         } else if (state is NewsError) {
-          return Center(child: Text('Ошибка: ${state.exeption.toString()}'));
+          return Center(
+              child: Text(LocaleKeys.errorTemplate
+                  .tr(args: [state.exeption.toString()])));
         }
         return const SizedBox.shrink();
       },

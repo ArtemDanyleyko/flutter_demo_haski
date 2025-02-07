@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:haski/common/load_type.dart';
 import 'package:haski/dialog/dialog_service.dart';

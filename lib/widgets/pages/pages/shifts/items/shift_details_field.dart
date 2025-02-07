@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:haski/common/app_colors.dart';
-import 'package:haski/extensions/datetime_extension.dart';
-import 'package:haski/models/shifts/shift.dart';
 
 class ShiftDetailsField extends StatelessWidget {
   const ShiftDetailsField(

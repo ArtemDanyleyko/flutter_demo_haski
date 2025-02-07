@@ -63,7 +63,7 @@ class DialogServiceImpl implements DialogService {
                 TextButton(
                   onPressed: () => Navigator.pop(context, false),
                   child: Text(
-                    no ?? LocaleKeys.No.tr(),
+                    no ?? LocaleKeys.no.tr(),
                     style: TextStyle(
                         fontFamily: FontConstants.nunito,
                         fontSize: 16,
@@ -74,7 +74,7 @@ class DialogServiceImpl implements DialogService {
                 TextButton(
                   onPressed: () => Navigator.pop(context, true),
                   child: Text(
-                    yes ?? LocaleKeys.Yes.tr(),
+                    yes ?? LocaleKeys.yes.tr(),
                     style: TextStyle(
                         fontFamily: FontConstants.nunito,
                         fontSize: 16,
@@ -151,7 +151,7 @@ class DialogServiceImpl implements DialogService {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
-                    ok ?? LocaleKeys.Ok.tr(),
+                    ok ?? LocaleKeys.ok.tr(),
                     style: TextStyle(
                         fontFamily: FontConstants.nunito,
                         fontSize: 16,

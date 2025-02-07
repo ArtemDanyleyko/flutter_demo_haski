@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:haski/common/app_colors.dart';
+import 'package:haski/generated/locale_keys.g.dart';
 
 class NewsAppBar extends StatelessWidget implements PreferredSizeWidget {
   final TabController tabController;
@@ -31,18 +33,19 @@ class NewsAppBar extends StatelessWidget implements PreferredSizeWidget {
         ),
         indicatorAnimation: TabIndicatorAnimation.linear,
         onTap: onTabChange,
-        tabs: const [
+        tabs: [
           Tab(
             height: 30,
             child: Text(
-              'Сообщения',
-              style: TextStyle(fontSize: 14, color: AppColors.hoki),
+              LocaleKeys.messages.tr(),
+              style: TextStyle(
+                  fontSize: 14, color: const Color.fromARGB(255, 40, 66, 84)),
             ),
           ),
           Tab(
             height: 30,
             child: Text(
-              'Новости',
+              LocaleKeys.news.tr(),
               style: TextStyle(fontSize: 14, color: AppColors.hoki),
             ),
           ),
